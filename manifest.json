@@ -1,0 +1,28 @@
+{
+
+	"manifest_version": 2,
+	"name": "aid-core2.js",
+	"version": "1.0",
+  
+	"description": "WebExtension port of aid-core2",
+	
+	"background": {
+		"scripts": ["background.js"]
+	  },
+
+	"browser_action": {
+		"browser_style": true,
+		"default_popup": "popup/index.html",
+		"default_icon": {
+			"16": "icons/page-16.png",
+			"32": "icons/page-32.png"
+		}
+	},
+  
+	"content_scripts": [
+		{
+			"matches": ["*://*.amazon.com/*"],
+			"js": ["aid-core2.js"]
+		}
+	]
+  }

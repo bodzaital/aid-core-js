@@ -1,0 +1,32 @@
+html, body
+{
+	width: 300px;
+	height: 300px;
+	margin: 1rem;
+	overflow-x: hidden;
+}
+
+span
+{
+	display: block;
+}
+
+.head
+{
+	font-size: 1.2rem;
+}
+
+.link
+{
+	margin-right: .5rem;
+	border: 1px solid rgba(100, 0, 50);
+	display: inline-block;
+	padding: .25rem;
+	text-decoration: none;
+}
+
+.link:hover
+{
+	background-color: rgba(100, 0, 50);
+	color: white;
+}
