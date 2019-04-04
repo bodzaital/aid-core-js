@@ -1,0 +1,133 @@
+*
+{
+	// outline: 1px solid red;
+}
+
+html, body
+{
+	width: 300px;
+	height: 300px;
+	overflow-x: hidden;
+}
+
+.header
+{
+	margin: .5rem .5rem 0;
+
+	.searchbar
+	{
+		border: 1px solid lightgray;
+		border-radius: .35rem;
+		padding: .5rem;
+		font-style: italic;
+		width: 100%;
+		margin: 0 0 .5rem;
+		text-align: center;
+	}
+
+	.filter
+	{
+		display: flex;
+
+		.image,
+		.video
+		{
+			margin: 0 auto;
+			color: black;
+			border-radius: .25rem;
+			border: .2rem solid transparent;
+			transition: border .15s ease-in-out;
+
+			&:hover
+			{
+				border: .2rem solid darkviolet;
+			}
+
+			label
+			{
+				display: block;
+				padding: .25rem .5rem .25rem 1rem;
+				text-indent: -.5rem;
+			}
+
+			input
+			{
+				width: 13px;
+				height: 13px;
+				padding: 0;
+				margin:0;
+				vertical-align: bottom;
+				position: relative;
+				top: -1px;
+				*overflow: hidden;
+			}
+		}
+	}
+
+	hr
+	{
+		margin-bottom: .5rem;
+		padding: 0;
+		border: 0;
+		border-bottom: 1px solid lightgray;
+	}
+}
+
+#root
+{
+	margin: 0 .5rem;
+
+	h1
+	{
+		font-size: 1.5rem;
+		font-weight: 400;
+		margin: 0 0 1rem 0;
+		padding: 0;
+
+		&:not(.error)
+		{
+			border-bottom: 1px dashed lightgray;
+		}
+	}
+
+	.error
+	{
+		text-align: center;
+		
+		h1
+		{
+			color: red;
+		}
+	}
+
+	.product-type
+	{
+		margin-bottom: 1rem;
+	}
+
+	.product-link
+	{
+		background-color: lightpink;
+		text-decoration: none;
+		color: black;
+		padding: .25rem .5rem;
+		border-radius: .25rem;
+		border: .2rem solid transparent;
+		transition: border .15s ease-in-out;
+
+		&:not(:last-child)
+		{
+			margin-right: 1rem;
+		}
+
+		&:hover
+		{
+			border: .2rem solid darkviolet;
+		}
+	}
+}
+
+.hidden
+{
+	display: none;
+}

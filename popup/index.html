@@ -5,8 +5,22 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<input id="search" type="text" placeholder="Search for names">
-	<hr>
+	<div class="header">
+		<input class="searchbar" id="search" type="text" placeholder="Search for names">
+		<div class="filter">
+			<div class="image">
+				<label for="image">Images
+					<input type="checkbox" id="image">
+				</label>
+			</div>
+			<div class="video">
+				<label for="video">Videos
+					<input type="checkbox" id="video">
+				</label>
+			</div>
+		</div>
+		<hr>
+	</div>
 	<div id="root"></div>
 	<script src="script.js"></script>
 </body>

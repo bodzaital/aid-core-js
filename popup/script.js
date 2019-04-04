@@ -23,14 +23,18 @@ function SortyBoi(a, b) {
 port.onMessage.addListener(function(m) {
 	if (++messagesReceived == 1) {
 		if (m == undefined) {
+			holder = document.createElement("div");
+			holder.classList.add("error");
+			
 			let error = document.createElement("h1");
-			error.classList.add("error");
 			error.innerText = "No data found.";
-			document.body.appendChild(error);
+			holder.appendChild(error);
+			
 			let description = document.createElement("p");
-			description.classList.add("error");
 			description.innerHTML = "Wait until the page loads further or reload the page.<br>Data detection occurs at navigation.";
-			document.body.appendChild(description);
+			holder.appendChild(description);
+			
+			div.appendChild(holder);
 		} else {
 			m.sort((a, b) => {
 				return SortyBoi(a, b);
@@ -59,8 +63,8 @@ port.onMessage.addListener(function(m) {
 	}
 });
 
-document.querySelector("#search").addEventListener("keyup", (e) => {
-	let str = document.querySelector("#search").value;
+document.querySelector(".searchbar").addEventListener("keyup", (e) => {
+	let str = document.querySelector(".searchbar").value;
 	let products = document.querySelectorAll(".product-type");
 	for (let i = 0; i < products.length; i++) {
 		let f = products[i];
