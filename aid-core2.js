@@ -30,6 +30,9 @@ function DoIt() {
 	let q = 0;
 	let u = 0;
 
+	let url = window.location.href;
+	foundThings.currentAsin = url.substring(url.indexOf("/dp/") + 4, url.indexOf("/dp/") + 4 + 10);
+
 	for (var key in json.colorImages) {
 		foundThings[q] = [];
 		foundThings[q].name = key;
@@ -37,6 +40,7 @@ function DoIt() {
 		u = 0;
 		const e = json.colorImages[key];
 		for (let i = 0; i < e.length; i++) {
+			foundThings[q].asin = json.colorToAsin[key].asin;
 			foundThings[q].images[u] = e[i].hiRes;
 			u++;
 		}
